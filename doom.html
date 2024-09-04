@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="parent">
+        <li>nitish</li>
+    </div>
+
+</body>
+<script>
+    function addList(val){
+        const li =document.createElement('li')
+        li.innerText=`${val}`
+        document.querySelector('.parent').appendChild(li)
+    }
+    addList('realmadrid')
+
+    function optimisedList(val){
+        const li =document.createElement('li')
+        li.appendChild(document.createTextNode(`${val}`))
+        document.querySelector('.parent').appendChild(li)
+
+    }
+    optimisedList('champions league')
+</script>
+</html>
