@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dark-theme{
+            background-color: black;
+            color: white;
+        }
+        .light-theme{
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">clickme</button>
+</body>
+
+<script>
+    const btn=document.getElementById('btn')
+    const body=document.querySelector('body')
+    let currmode='light'
+
+    // btn.addEventListener('click',()=>{
+    //     if (currmode==='light'){
+    //         currmode='dark'
+    //         body.style.backgroundColor='black'
+    //     }else{
+    //         currmode='light'
+    //         body.style.backgroundColor='white'
+    //     }
+    // })
+
+    //second method
+    //const currtheme=body.classList.contains('dark-theme')?'dark':'light'
+
+    btn.addEventListener('click',()=>{
+        //const currtheme=body.classList.contains('dark-theme')?'dark':'light'
+
+        if(currmode==='dark'){
+            currmode='light'
+            body.classList.remove('dark-theme')
+            body.classList.add('white-theme')
+            
+        }else{
+            currmode='dark'
+            body.classList.remove('light-theme')
+            body.classList.add('dark-theme')
+        }
+
+    })
+
+
+    
+</script>
+</html>
