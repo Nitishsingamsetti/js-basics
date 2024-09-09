@@ -96,5 +96,62 @@ class Engineer extends Person{
     }
 };
 
-let objnew = new Engineer()
+let objnew = new Engineer('ece')
+
+
+//------------
+class Car {
+    constructor(brand) {
+      this.carname = brand;
+    }
+    present() {
+      return 'I have a ' + this.carname;
+    }
+  }
+  
+  class Model extends Car {
+    constructor(brand, model) {
+      super(brand);
+      this.model = model;
+    }
+    show() {
+      return super.present() + ', it is a ' + this.model;
+    }
+  }
+  
+  let mycar = new Model("Ford", "Mustang");
+
+//----------
+let data ='old data'
+  class User{
+    constructor(name,email){
+        this.name=name;
+        this.email=email;
+    }
+    veiwData(){
+        console.log(data)
+    }
+  }
+
+  let stu1= new User('pepe','pepe@gmail')
+  let stu2= new User('arbeola','arbeola@gmail')
+
+//------
+class Admin extends User{
+    constructor(name,email){
+        super(name,email);
+    }
+    editData(){
+        data = 'new version of data'
+
+    }
+};
+
+let admin1 = new Admin('iker','ike@gmail');
+
+
+
+
+
+
 
